@@ -12,7 +12,11 @@ namespace TestPushApp.Controllers
     [Route("api/[controller]")]
     public class PushController : Controller
     {
-        // POST api/<controller>
+        /// <summary>
+        /// Send notification via pushover
+        /// </summary>
+        /// <param name="notification">Notification parameters: App API token, user key, message</param>
+        /// <returns>Returns response from pushover</returns>
         [HttpPost]
         public IActionResult Post([FromBody]Notification notification)
         {
