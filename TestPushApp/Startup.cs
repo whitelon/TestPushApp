@@ -60,6 +60,7 @@ namespace TestPushApp
              app.UseSwaggerUI(c =>
              {
                  c.SwaggerEndpoint("/swagger/testPush/swagger.json", "Test Push V1");
+                 c.RoutePrefix = string.Empty;
              });
 
             app.UseMvc();
